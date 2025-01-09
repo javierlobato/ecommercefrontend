@@ -1,21 +1,26 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
-
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
-import Home from './containers/errors/Home'
-import Error404 from './containers/errors/error404'
+import Home from './containers/errors/Home';
+import Error404 from './containers/errors/error404';
+import { Navbar } from './components/navigation/Navbar'; 
 
 function App() {
   return (
-    <Router>
-      <Routes>
-         {/*Error Display*/}
-        <Route path="*" element={<Error404/>} />
-        {/*Home Page*/}
-        <Route exact path="/" element={<Home />} />
-      </Routes>
-    </Router>
-  )
+    <Provider store={store}>
+      <Router>
+        <Navbar />            
+        <Routes>
+          <Route path="/" element={<Home />} />          
+          <Route path="*" element={<Error404 />} />
+        </Routes>      
+      </Router>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
+
+
+
