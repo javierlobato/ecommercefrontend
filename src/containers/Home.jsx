@@ -1,4 +1,4 @@
-import Layout from "../../hocs/Layout";
+import Layout from "../hocs/Layout";
 
 const Home = () => {
     return (

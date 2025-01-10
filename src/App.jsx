@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
-import Home from './containers/errors/Home';
+import Home from './containers/Home';
 import Error404 from './containers/errors/error404';
 import { Navbar } from './components/navigation/Navbar'; 
+import Footer from './components/navigation/Footer';
+
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />          
           <Route path="*" element={<Error404 />} />
-        </Routes>      
+        </Routes>        
       </Router>
+      <Footer />
     </Provider>
   );
 }
