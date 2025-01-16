@@ -1,4 +1,4 @@
-import Layout from "../../hocs/Layout";
+import Layout from '../../hocs/Layout';
 
 const Error404 = () => {
     return (
