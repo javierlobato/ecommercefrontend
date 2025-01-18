@@ -11,7 +11,7 @@ function Home() {
       .then(response => {
         setData(response.data.message);
       })
-      .catch(err => {
+      .catch(() => {
         setError('Hubo un error al obtener los datos.');
       });
   }, []);
