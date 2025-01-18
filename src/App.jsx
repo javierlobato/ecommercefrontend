@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 
 import Home from './containers/Home';
-import Error404 from './containers/errors/error404';
+import Error404 from './containers/errors/Error404';
 import { Navbar } from './components/navigation/Navbar'; 
 import Footer from './components/navigation/Footer';
 
